@@ -133,7 +133,6 @@ dmypy.json
 .pyre/
 .idea
 .tmp
-.DS_Store
 
 # Project dependencies
 tmp/

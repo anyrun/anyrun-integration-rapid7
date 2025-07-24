@@ -1,6 +1,6 @@
 services:
   connector-anyrun-feed:
-    build: .
+    build: ..
     env_file: '.env'
     container_name: connector-anyrun-feed
     restart: always
