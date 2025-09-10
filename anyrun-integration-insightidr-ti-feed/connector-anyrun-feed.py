@@ -48,7 +48,7 @@ def get_indicators(indicator_type: str) -> list[str | None]:
     """
     indicators = []
 
-    with FeedsConnector(api_key=Config.ANYRUN_BASIC_TOKEN, integration=Config.RAPID7_API_KEY) as connector:
+    with FeedsConnector(api_key=Config.ANYRUN_BASIC_TOKEN, integration=Config.VERSION) as connector:
         for feeds in FeedsIterator.taxii_stix(
             connector,
             collection=indicator_type,
