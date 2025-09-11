@@ -3,22 +3,23 @@ ANY.RUN Feed Connector
 
 DESCRIPTION
 -----------
-The ANY.RUN Feed Connector is a PowerShell-based solution that automatically 
-synchronizes threat indicators from ANY.RUN TAXII feeds to Rapid7 InsightIDR 
-threat feeds. The connector supports both manual and scheduled execution modes 
+ANY.RUN Feed Connector is a PowerShell-based solution that automatically
+synchronizes threat indicators from ANY.RUN TI Feeds to Rapid7 InsightIDR
+threat feeds. The connector supports both manual and scheduled execution modes
 with flexible logging options.
 
 COMPONENTS
 ----------
+
 1. connector-anyrun-feed.ps1      - Main connector script
 2. ConfigureFeedConnector.ps1     - Windows installer/configuration script
-3. .env                          - Configuration file (optional)
+3. .env                           - Configuration file (optional)
 
 SYSTEM REQUIREMENTS
 -------------------
 - Windows OS (for scheduled execution)
 - PowerShell 5.0 or later (PowerShell 7+ supported)
-- Linux/macOS supported for manual execution
+- Linux/macOS that supports manual execution
 - Network access to ANY.RUN and Rapid7 APIs
 
 CONFIGURATION
@@ -27,7 +28,7 @@ Create a .env file in the same directory as the scripts with the following varia
 
     RAPID7_API_KEY=your-rapid7-api-key-here
     RAPID7_HOST=your-rapid7-instance.rapid7.com
-    THREAT_FEED_ACCESS_KEY=your-threat-feed-access-key
+    RAPID7_THREAT_FEED_ACCESS_KEY=your-threat-feed-access-key
     ANYRUN_BASIC_TOKEN=your-anyrun-token-here
     ANYRUN_FEED_FETCH_DEPTH=7
     ANYRUN_FEED_FETCH_INTERVAL=60
@@ -47,12 +48,12 @@ Linux/macOS:
 EXECUTION MODES
 ---------------
 infinite  - Runs continuously, fetching indicators at specified intervals
-scheduled - Runs once and exits (for use with task schedulers)
+scheduled - Runs once and exits (to be used with task schedulers)
 
 LOGGING MODES
 -------------
 console   - Log to console output (default for infinite mode)
-eventlog  - Log to Windows Event Log (default for scheduled mode, requires admin)
+eventlog  - Log to Windows Event Log (default for scheduled mode, requires admin rights)
 
 EXAMPLES
 --------
@@ -67,7 +68,7 @@ Run continuously with explicit console logging:
 
 WINDOWS INSTALLATION
 --------------------
-For automated scheduled execution on Windows, use the installer:
+For automated scheduled execution on Windows, follow these steps:
 
 1. Run PowerShell as Administrator (recommended for EventLog support)
 2. Execute: powershell.exe -File "ConfigureFeedConnector.ps1"
@@ -84,14 +85,14 @@ The installer will:
 INSTALLER OPTIONS
 -----------------
 [1] Install Feed Connector    - First-time installation
-[2] Update Feed Connector     - Update existing installation  
-[3] Uninstall Feed Connector  - Remove connector and scheduled task
+[2] Update Feed Connector     - Update existing connector
+[3] Uninstall Feed Connector  - Remove connector and the scheduled task
 
 EVENTLOG NOTES
 --------------
 - EventLog logging requires the "ANY.RUN Feed Connector" source to exist
-- The installer will attempt to create this source with admin privileges
-- If admin rights are unavailable, console logging will be used instead
+- The installer will attempt to create this source with admin rights
+- If admin rights are not obtained, console logging will be used instead
 - EventLog entries appear in Windows Application Log
 
 TROUBLESHOOTING
@@ -111,7 +112,7 @@ SECURITY CONSIDERATIONS
 
 API DOCUMENTATION
 -----------------
-ANY.RUN TAXII API: https://any.run/api-documentation/
+ANY.RUN API: https://any.run/api-documentation/
 Rapid7 API: https://docs.rapid7.com/insightidr/
 
 SUPPORT
@@ -133,4 +134,3 @@ project/
 ├── ConfigureFeedConnector.ps1     # Windows installer
 ├── .env                           # Configuration file
 └── README.txt                     # This documentation
-
