@@ -11,6 +11,6 @@ ______________________________________________________________________
 This repository contains official connectors developed by ANY.RUN for seamless integration with Rapid7 products.  
 The highlight is the ANY.RUN Threat Intelligence Feed Connector for Rapid7 InsightIDR, which delivers fresh,  
 high-confidence IOCs directly from ANY.RUN’s interactive malware sandbox into InsightIDR Community Threats,  
-empowering faster detection and response.   
+empowering faster detection and response. There are two ways to use it: Python and PowerShell script   
 
 Technical details and setup instructions can be found in the corresponding subfolder.
