@@ -10,7 +10,13 @@ ______________________________________________________________________
 
 Connector delivers fresh, high-confidence IOCs directly from ANY.RUN’s interactive malware sandbox into InsightIDR Community Threats, empowering faster detection and response.
 
-#  Installation Guide
+# Installation Guide
+There are two ways to use the integration: Python and PowerShell script.
+
+### Setup PowerShell script
+Follow [this link](https://github.com/anyrun/anyrun-integration-rapid7/tree/main/anyrun-integration-insightidr-ti-feed/powershell)
+
+### Setup Python script
 
 #### Clone this project
 ```console
@@ -40,17 +46,18 @@ $ python3 connector-anyrun-feed.py
 
 #  Setup secrets
 
-#### Follow InsightIDR product
+#### Go to InsightIDR
 
 ![img.png](static/img.png)
 
-#### Select Settings/API Keys
+#### Click the settings icon and choose API Keys in the dropdown menu 
 ![img_1.png](static/img_1.png)
 
-#### Generate a new API-Key
+#### Click Generate New User Key 
 ![img_2.png](static/img_2.png)
 
 #### Use API-KEY as the value for the environment variable: RAPID7_API_KEY
+Go to Detection Rules and find the Community Threads tab  
 
 #### Then follow Detection Rules/Community Threads
 ![img_3.png](static/img_3.png)
@@ -70,7 +77,7 @@ $ python3 connector-anyrun-feed.py
 
 To obtain your Basic Authentication token, please contact your ANY.RUN account manager directly or fill out the request [form](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
 
-Use Basic Authentication token, as the value for the environment variable: ANYRUN_BASIC_TOKEN
+Use Basic Authentication token as the value for the environment variable: ANYRUN_BASIC_TOKEN
 
 ## Support
-This is an ANY.RUN supported connector. For support please contact <anyrun-integrations@any.run>
+This is an ANY.RUN supported connector. If you need help, contact <support@any.run>
