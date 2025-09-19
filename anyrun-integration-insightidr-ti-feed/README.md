@@ -6,7 +6,7 @@
 
 ______________________________________________________________________
 
-# ANY.RUN Threat Intelligence Feed Connector for Rapid7 InsightIDR
+# ANY.RUN Threat Intelligence Feeds Connector for Rapid7 InsightIDR
 
 Connector delivers fresh, high-confidence IOCs directly from ANY.RUN’s interactive malware sandbox into InsightIDR Community Threats, empowering faster detection and response.
 

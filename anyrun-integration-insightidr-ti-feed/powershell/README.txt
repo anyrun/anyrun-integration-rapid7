@@ -28,7 +28,7 @@ Create a .env file in the same directory as the scripts with the following varia
 
     RAPID7_API_KEY=your-rapid7-api-key-here
     RAPID7_HOST=your-rapid7-instance.rapid7.com
-    RAPID7_THREAT_FEED_ACCESS_KEY=your-threat-feed-access-key
+    THREAT_FEED_ACCESS_KEY=your-threat-feed-access-key
     ANYRUN_BASIC_TOKEN=your-anyrun-token-here
     ANYRUN_FEED_FETCH_DEPTH=7
     ANYRUN_FEED_FETCH_INTERVAL=60
