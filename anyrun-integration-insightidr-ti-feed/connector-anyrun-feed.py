@@ -48,12 +48,10 @@ def get_indicators(indicator_type: str) -> list[str | None]:
     """
     indicators = []
 
-    with FeedsConnector(api_key=Config.ANYRUN_BASIC_TOKEN, integration=Config.VERSION) as connector:
+    with FeedsConnector(Config.ANYRUN_API_KEY, integration=Config.VERSION) as connector:
         for feeds in FeedsIterator.taxii_stix(
             connector,
             collection=indicator_type,
-            match_type='indicator',
-            match_version='all',
             chunk_size=5000,
             limit=5000,
             modified_after=(datetime.now(UTC) - timedelta(days=Config.ANYRUN_FEED_FETCH_DEPTH)).strftime(DATE_TIME_FORMAT)

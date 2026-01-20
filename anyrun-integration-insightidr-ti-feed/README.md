@@ -28,7 +28,7 @@ $ git clone git@github.com:anyrun/anyrun-integration-rapid7.git
 $ cd anyrun-integration-rapid7/anyrun-integration-insightidr-ti-feed
 ```
 
-#### Create and fill the .env config. See "Setup secrets" and "Generate Basic Authentication token" sections below
+#### Create and fill the .env config. See "Setup secrets" and “Generate your API key” sections below
 ```console
 $ cp .env_example .env
 ```
@@ -73,11 +73,8 @@ Go to Detection Rules and find the Community Threads tab
 
 #### Use API-KEY as the value for the environment variable: THREAT_FEED_ACCESS_KEY
 
-## Generate Basic Authentication token
-
-To obtain your Basic Authentication token, please contact your ANY.RUN account manager directly or fill out the request [form](https://any.run/demo/?utm_source=opencti_marketplace&utm_medium=integration&utm_campaign=opencti_form).
-
-Use Basic Authentication token as the value for the environment variable: ANYRUN_BASIC_TOKEN
+## Generate your API key
+Please use ANY.RUN’s API key without a prefix. Prefixed API keys and Basic Authentication for TI Feeds won’t be supported in future releases. For assistance or access to ANY.RUN’s services, please reach out to our [sales team](https://any.run/enterprise/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=insightidr&utm_content=linktoenterprise#contact-sales).
 
 ## Support
 This is an ANY.RUN supported connector. If you need help, contact <support@any.run>
