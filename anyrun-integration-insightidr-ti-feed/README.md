@@ -77,4 +77,4 @@ Go to Detection Rules and find the Community Threads tab
 Please use ANY.RUN’s API key without a prefix. Prefixed API keys and Basic Authentication for TI Feeds won’t be supported in future releases. For assistance or access to ANY.RUN’s services, please reach out to our [sales team](https://any.run/enterprise/?utm_source=anyrungithub&utm_medium=documentation&utm_campaign=insightidr&utm_content=linktoenterprise#contact-sales).
 
 ## Support
-This is an ANY.RUN supported connector. If you need help, contact <support@any.run>
+This is an ANY.RUN supported connector. If you need help, contact <techsupport@any.run>
